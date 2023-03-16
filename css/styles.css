@@ -1,0 +1,15 @@
+body {
+  font-family: Calibri, sans-serif;
+}
+
+table, th, td {
+  border: 1px solid #000;
+  border-collapse: collapse;
+  padding-left: 5px;
+  padding-right: 5px;
+  font-family: Calibri, sans-serif;
+}
+
+.header {
+  background-color: lightgray;
+}
