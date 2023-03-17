@@ -46,13 +46,16 @@ const userData = {
 
 const url = "https://thejsway-server.herokuapp.com/api/countries";
 
-fetch(url, {
-  method: "POST",
-  body: JSON.stringify(userData),
-  headers: {
-    "Content-Type": "application/json"
-  }
-})
-  .then(response => response.json())
-  .then(data => console.log(data))
-  .catch(error => console.error(error));
+async function getResponse() {
+  const res = await fetch(url, {
+    method: "POST",
+    body: JSON.stringify(userData),
+    headers: {
+      "Content-Type": "application/json"
+    }
+  }).catch(error => console.error(error));
+  const json = await res.text();
+  console.log(json);
+}
+
+getResponse();
